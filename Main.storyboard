@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="6TP-pT-qKw">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+    </dependencies>
+    <scenes>
+        <!--Tone Generator View Controller-->
+        <scene sceneID="KFj-u9-y9V">
+            <objects>
+                <viewController id="6TP-pT-qKw" customClass="ToneGeneratorViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DDw-5i-nQX"/>
+                        <viewControllerLayoutGuide type="bottom" id="QXK-cq-e0c"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VZm-yT-zk6">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="7" minValue="0.5" maxValue="60" translatesAutoresizingMaskIntoConstraints="NO" id="DeM-3M-nla">
+                                <rect key="frame" x="14" y="459" width="336" height="31"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="14" y="459" width="336" height="31"/>
+                                </variation>
+                                <connections>
+                                    <action selector="carrierSliderChanged:" destination="6TP-pT-qKw" eventType="touchUpOutside" id="R8y-xl-usS"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="42" minValue="15" maxValue="1200" translatesAutoresizingMaskIntoConstraints="NO" id="F0F-fh-0dd">
+                                <rect key="frame" x="244" y="391" width="342" height="31"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="244" y="391" width="342" height="31"/>
+                                </variation>
+                                <connections>
+                                    <action selector="binauralSliderChanged:" destination="6TP-pT-qKw" eventType="valueChanged" id="5Ci-U2-Hku"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Carrier" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T6k-Kw-bnl">
+                                <rect key="frame" x="30" y="148" width="52" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Binaural Beat" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XGj-Pb-QQG">
+                                <rect key="frame" x="462" y="148" width="103" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="rightFrequency" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8vt-jN-HRh">
+                                <rect key="frame" x="462" y="309" width="115" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="leftFrequency" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3MY-hb-cyp">
+                                <rect key="frame" x="30" y="309" width="105" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="OzO-qt-Zb4">
+                                <rect key="frame" x="30" y="528" width="547" height="29"/>
+                                <segments>
+                                    <segment title="Delta"/>
+                                    <segment title="Theta"/>
+                                    <segment title="Alpha"/>
+                                    <segment title="Beta"/>
+                                    <segment title="Gamma"/>
+                                </segments>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="30" y="528" width="548" height="29"/>
+                                </variation>
+                                <connections>
+                                    <action selector="waveTypeControlChanged:" destination="6TP-pT-qKw" eventType="valueChanged" id="M1Q-aJ-Ix1"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S3l-1j-fes">
+                                <rect key="frame" x="246" y="48" width="86" height="30"/>
+                                <state key="normal" title="Play">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="togglePlay:" destination="6TP-pT-qKw" eventType="touchUpInside" id="BnQ-Qj-EPx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="binauralLabel" destination="XGj-Pb-QQG" id="yIQ-tn-tdf"/>
+                        <outlet property="binauralSlider" destination="F0F-fh-0dd" id="TgM-d3-CdE"/>
+                        <outlet property="carrierLabel" destination="T6k-Kw-bnl" id="S4h-Sn-z26"/>
+                        <outlet property="carrierSlider" destination="DeM-3M-nla" id="QUF-x1-pIC"/>
+                        <outlet property="leftFrequencyLabel" destination="3MY-hb-cyp" id="J9F-un-KcM"/>
+                        <outlet property="playButton" destination="S3l-1j-fes" id="Lg6-Em-779"/>
+                        <outlet property="rightFrequencyLabel" destination="8vt-jN-HRh" id="rDq-h6-k4T"/>
+                        <outlet property="waveTypeControl" destination="OzO-qt-Zb4" id="kTh-KU-8dE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mgp-Jd-S1d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="655" y="537"/>
+        </scene>
+    </scenes>
+</document>
