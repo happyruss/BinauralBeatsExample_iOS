@@ -12,6 +12,9 @@ which includes the core engine to create binaural beats.
 Binaural beats are a sound healing technology used to create states of consciousness
 http://www.guidedmeditationtreks.com/binaural.html
 
+Some background on the algorithms can be found here
+http://www.gunkyfunky.com/blog/open-source-binaural-beats
+
 The production app can be found on the Apple app store at
 https://itunes.apple.com/us/app/binaural/id958442825?ls=1&mt=8
 
